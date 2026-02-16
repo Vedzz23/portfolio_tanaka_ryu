@@ -1,73 +1,191 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanaka Ryu - Painterly Art Commissions</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
 </head>
-<body>
 
+<body>
     <header>
         <nav>
             <div class="logo">Tanaka Ryu</div>
-            <ul class="nav-links">
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about-me">About Me</a></li>
                 <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#pricing">Price List</a></li>
                 <li><a href="#tos">T.O.S</a></li>
                 <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#faq">F.A.Q</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <h1>DIGITAL PAINTERLY ARTSTYLE COMMISSON</h1>
-        <p>Character Potraits, Character Model, Concept Art, Book Cover, And Background Art.</p>
-        <a href="#gallery" class="cta-button">My Arts</a>
+    <section id="home" class="hero-fullscreen">
+        <div class="hero-content">
+            <h1>DIGITAL PAINTERLY<br>ARTSTYLE COMMISSION</h1>
+            <div class="hero-actions">
+                <a href="#about-me" class="cta-button">About Me</a>
+            </div>
+        </div>
+
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span>Character Portraits • Character Model • Concept Art • Book Cover • Background Art • Character
+                    Portraits • Character Model • Concept Art • Book Cover • Background Art • </span>
+                <span>Character Portraits • Character Model • Concept Art • Book Cover • Background Art • Character
+                    Portraits • Character Model • Concept Art • Book Cover • Background Art • </span>
+                <span>Character Portraits • Character Model • Concept Art • Book Cover • Background Art • Character
+                    Portraits • Character Model • Concept Art • Book Cover • Background Art • </span>
+                <span>Character Portraits • Character Model • Concept Art • Book Cover • Background Art • Character
+                    Portraits • Character Model • Concept Art • Book Cover • Background Art • </span>
+            </div>
+        </div>
     </section>
 
     <section id="about-me">
-        <h1>About Me</h1>
-        <p>Welcome to my portfolio. I am Tanaka Ryu, a young digital illustrator specializing in moody and dramatic character portraits. Also accepting Concept Art, Background, and Book Cover Commission.
+        <div class="about-wrapper">
+            <div class="about-image">
+                <img src="img/IMG_3710.PNG" alt="Profile Art">
+            </div>
+            <div class="about-text">
+                <h2>The Artist’s Manifesto</h2>
+                <p><strong>About the Vision</strong></p>
 
-My primary focus is capturing emotion through cinematic lighting and a detailed painterly and semi-realism style. For me, art is not about speed, it is about quality.
+                <p>Welcome to the digital atelier of Tanaka Ryu. I am a digital illustrator focused on the intersection
+                    of cinematic lighting and traditional-style textures. My work revolves around storytelling through
+                    atmospheric visuals, specializing in a painterly aesthetic that brings depth and soul to every
+                    stroke. I believe that a character is not just a model, but a narrative waiting to be told through
+                    light and shadow.</p>
 
-Each piece you see in this gallery is the result of intense dedication and focus, often requiring 5-10+ hours of pure rendering and refinement.
 
-I maintain limited commission slots 3-4 per month to ensure every project receives the attention it deserves. Let's create something remarkable together.</p>
+                <p><strong>The Expertise</strong></p>
+                <ul style="padding: 0;">
+                    <li><strong>Character Design & Portraits:</strong> Crafting moody, expressive individuals with a
+                        focus on personality.</li>
+                    <li><strong>Concept & Background Art:</strong> Building immersive worlds with cinematic depth.</li>
+                    <li><strong>Book Covers & Illustration:</strong> Creating high-impact visuals designed to captivate
+                        and engage.</li>
+                    <li><strong>Character Models:</strong> Detailed references built for consistency and professional
+                        use.</li>
+                </ul>
+
+                <div class="tool-badges">
+                    <span>#KritaUser</span>
+                    <span>#IbisPaintX</span>
+                    <span>#DigitalPainterly</span>
+                </div>
+            </div>
+        </div>
     </section>
+
 
     <section id="gallery">
         <h2>My Best Work</h2>
         <div class="gallery-grid">
-            <img src="img/ado.PNG" alt="Ado Dome Tour Fanart" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">
-            <img src="img/BatistaHoshi.PNG" alt="Batista hoshi" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">
-            <img src="img/Frieren.PNG" alt="Frieren" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">
-            <img src="img/KanaeVonRosewald.JPG" alt="Kanae Von Rosewald" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">
-            <img src="img/KenKaneki.JPG" alt="Ken Kaneki Potrait" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">
-            <img src="img/IMG_2371.PNG" alt="Potrait Semi-Realism Character" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">  
-            <img src="img/HuTao.PNG" alt="hutao" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">
-            <img src="img/IMG_2858.PNG" alt="MY OC, Watanabe" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">
-            <img src="img/IMG_2853.PNG" alt="First Commission" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">
-            <img src="img/IMG_2611.PNG" alt="Columbina" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">
-            <img src="img/IMG_2455.PNG" alt="Genshin Character" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">
-            <img src="img/IMG_2812.PNG" alt="denji fanart" oncontextmenu="return false;" onmousedown="return false;" style="user-select: none;">
+            <img src="img/ado.PNG" alt="Ado Dome Tour Fanart" oncontextmenu="return false;" onmousedown="return false;"
+                style="user-select: none;">
+            <img src="img/BatistaHoshi.PNG" alt="Batista hoshi" oncontextmenu="return false;"
+                onmousedown="return false;" style="user-select: none;">
+            <img src="img/Frieren.PNG" alt="Frieren" oncontextmenu="return false;" onmousedown="return false;"
+                style="user-select: none;">
+            <img src="img/KanaeVonRosewald.JPG" alt="Kanae Von Rosewald" oncontextmenu="return false;"
+                onmousedown="return false;" style="user-select: none;">
+            <img src="img/KenKaneki.JPG" alt="Ken Kaneki Potrait" oncontextmenu="return false;"
+                onmousedown="return false;" style="user-select: none;">
+            <img src="img/IMG_2371.PNG" alt="Potrait Semi-Realism Character" oncontextmenu="return false;"
+                onmousedown="return false;" style="user-select: none;">
+            <img src="img/HuTao.PNG" alt="hutao" oncontextmenu="return false;" onmousedown="return false;"
+                style="user-select: none;">
+            <img src="img/IMG_2858.PNG" alt="MY OC, Watanabe" oncontextmenu="return false;" onmousedown="return false;"
+                style="user-select: none;">
+            <img src="img/IMG_2611.PNG" alt="Columbina" oncontextmenu="return false;" onmousedown="return false;"
+                style="user-select: none;">
+            <img src="img/IMG_2455.PNG" alt="Genshin Character" oncontextmenu="return false;"
+                onmousedown="return false;" style="user-select: none;">
+            <img src="img/IMG_2812.PNG" alt="denji fanart" oncontextmenu="return false;" onmousedown="return false;"
+                style="user-select: none;">
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Words from the Atelier</h2>
+        <div class="testimonial-grid">
+            <div class="testi-card">
+                <div class="testi-content">
+                    <p>"The atmospheric lighting is simply incredible. Every stroke feels intentional and full of soul.
+                        Highly recommended!"</p>
+                    <span class="client-name">- Geannova R.</span>
+                </div>
+                <div class="testi-image">
+                    <img src="IMG/IMG_2853.PNG" alt="Commission Result 1">
+                </div>
+            </div>
+            </div>
         </div>
     </section>
 
     <section id="pricing">
-        <h2>Commission Price List</h2>
+        <h2 style="margin-top: 32px;">Commission Price List</h2>
         <p class="section-intro">
             Every art is made in well details. Around 2-3 days to make them, so pls buy my art :3
         </p>
-        
+
         <!-- ini ped yg kuperbaiki -->
         <div class="price-container">
             <div class="price-card">
                 <h3>Bronze: Sketch</h3>
                 <div class="price">$5</div>
-                <ul>    
+                <ul>
                     <li>Prices can go up or down depending on the complexity</li>
                     <li>(Headshot / Bust-Up)</li>
                     <li>Pure Processing Time: 6-8 Hours</li>
@@ -114,32 +232,105 @@ I maintain limited commission slots 3-4 per month to ensure every project receiv
         </div>
     </section>
 
+
+
     <section id="tos">
         <h2>Terms of Service</h2>
-        <ul>
-            <li> I Do: OC Character, Fanart, Game character, Face (Semi-Realism and Painterly style), Book Cover, Detailed Background, and Concept Art</li>
-            <li> I Do Not: NSFW, Mecha, Furry (ear/tails are okay).</li>
-            <li> Payment : PayPal, Patreon, Qris</li>
-            <li> Process : 50% down payment required. Full payment upon completion.</li>
-            <li> Revisi: max 3 times revision, if the revision is huge, will be extra change.</li>
-            <li> Processing time : 2-3 calendar time</li>
-            <li> Commissions are open to only 3-4 people per month.</li>
-        </ul>
-    </section>
-
-
-    <section id="contact">
-        <h2>Interested?</h2>
-        <p>DM Me on X or Instagram Right Now!</p>
-        <div class="contact-links">
-            <a href="https://instagram.com/tanaka_ryu3311" target="_blank" class="cta-button">DM Instagram</a>
-            <a href="https://x.com/tanaka_ryu2211" target="_blank" class="cta-button">DM X</a>
+        <div class="tos-grid">
+            <div class="tos-box">
+                <h3>I Do</h3>
+                <p>OC, Fanart, Game Character, Face (Semi-Realism), Detailed Background, Concept Art.</p>
+            </div>
+            <div class="tos-box">
+                <h3>I Don't</h3>
+                <p>NSFW, Mecha, Furry (ear/tails are okay).</p>
+            </div>
+            <div class="tos-box full">
+                <h3>Process & Payment</h3>
+                <ul>
+                    <li><strong>Payment:</strong> PayPal, Patreon, Qris.</li>
+                    <li><strong>Terms:</strong> 50% Down Payment. Max 3x revisions.</li>
+                    <li><strong>Time:</strong> 2-3 Days per piece. Slots limited to 3-4 people/month.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Tanaka Ryu. All Rights Reserved.</p>
+    <footer id="contact">
+        <div class="footer-content">
+            <h2>Interested?</h2>
+            <p>DM me on Social Media to secure your slot!</p>
+            <div class="contact-links">
+                <a href="https://instagram.com/tanaka_ryu3311" target="_blank" class="cta-button">DM Instagram</a>
+                <a href="https://x.com/tanaka_ryu2211" target="_blank" class="cta-button">DM Twitter</a>
+            </div>
+
+        </div>
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>How do I pay?</h3>
+                    <p>I currently accept payments via PayPal, Patreon, or QRIS. Full payment or a 50% down payment is
+                        required before I start the rendering process.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I use the art for merchandise?</h3>
+                    <p>For standard commissions, it's for personal use only. However, the Diamond Tier includes a
+                        commercial use license for book covers or merchandise.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you draw Furry or NSFW?</h3>
+                    <p>No. I do not draw NSFW, Mecha, or Furry (though animal ears/tails on humans are perfectly fine!).
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3>What software do you use?</h3>
+                    <p>I use Krita for high-end rendering on desktop and IbisPaint X for mobile sketching and detailing.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="copyright">
+            <p>&copy; 2026 Tanaka Ryu. All Rights Reserved.</p>
+        </div>
+
     </footer>
 
+    <script>
+        // Mematikan Klik Kanan di seluruh website
+         document.addEventListener('contextmenu', function(e) {
+           e.preventDefault();
+         alert("Y U DO DIS?");
+         });
+
+        // Mematikan shortcut inspeksi (Ctrl+Shift+I atau F12)
+        document.onkeydown = function(e) {
+         if(e.keyCode == 123) { return false; }
+         if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { return false; }
+         if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { return false; }
+         if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { return false; }
+         if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { return false; }
+        };
+    </script>
+
+    <script>
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
+
 </html>
